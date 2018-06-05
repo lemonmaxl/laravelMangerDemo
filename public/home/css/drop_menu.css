@@ -1,0 +1,207 @@
+
+@import "font-awesome.css";
+
+.select_main ul li{
+	display:inline-block;
+	margin:0;
+	padding:0 0 8px 0;
+	float:left;
+	line-height:48px;
+	position:relative;
+}
+.select_main > li > a{
+	padding:18px 24px;
+	font-size:18px;
+	color:#777;
+	text-decoration:none;
+	display:block;
+	-webkit-transition:color 0.2s linear, background 0.2s linear;
+	-moz-transition:color 0.2s linear, background 0.2s linear;
+	-o-transition:color 0.2s linear, background 0.2s linear;
+	transition:color 0.2s linear, background 0.2s linear;
+}
+.select_main li:hover > a, .select_main li.active a{
+	/*background:#018A00;*/
+	color:#fff;
+}
+.select_main > li > a i{
+	color:#bababa;
+}
+.select_main > li:hover > a i, .select_main li.active a i{
+	color:#fff;
+}
+.select_main ul, .select_main ul li ul{
+	list-style:none;
+	margin:0;
+	padding:0;
+	display:none;
+	position:absolute;
+	z-index:99;
+	width:140px;
+}
+.select_main ul{
+	left:0;
+	padding-top:10px;
+}
+.select_main > li > ul > li:first-child a:before{
+	content:'';
+	position:absolute;
+	bottom:48px;
+	left:45%;
+	margin-left:-48px;
+	width:0;
+	height:0;
+	border-left:8px solid rgba(255, 255, 255, 0);
+	border-right:8px solid rgba(255, 255, 255, 0);
+	border-bottom:8px solid #3f3f48;
+}
+.select_main > li > ul > li ul li:first-child a:before{
+	content:'';
+	position:absolute;
+	bottom:16px;
+	left:45%;
+	margin-left:-71px;
+	width:0;
+	height:0;
+	border-top:8px solid rgba(255, 255, 255, 0);
+	border-right:8px solid #018A00;
+	border-bottom:8px solid rgba(255, 255, 255, 0);
+}
+.select_main ul li ul{
+	top:0;
+	left:100%;
+	padding-left:10px;
+}
+.select_main ul li{
+	clear:both;
+	width:100%;
+	border:none;
+}
+.select_main ul li a{
+	padding:0 20px;
+	width:100%;
+	color:#fff;
+	font-size:14px;
+	text-decoration:none;
+	display:inline-block;
+	float:left;
+	clear:both;
+	background:#34343e;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-webkit-transition:background 0.2s linear;
+	-moz-transition:background 0.2s linear;
+	-o-transition:background 0.2s linear;
+	transition:background 0.2s linear;
+}
+.select_main ul li:hover > a{ background-color: #3f3f48; }
+.select_main > li > ul > li:first-child:hover a:before{
+	border-bottom-color:#3f3f48;
+}
+.select_main > li > ul > li ul li:first-child:hover a:before{
+	border-right-color:#3f3f48;
+}
+
+
+.select_main i{
+	line-height:20px !important;
+	margin-right:6px;
+	font-size:20px;
+	float:left;
+}
+.zoom-out{
+	-webkit-animation:zoomOut 600ms ease both;
+	-moz-animation:zoomOut 600ms ease both;
+	-o-animation:zoomOut 600ms ease both;
+	animation:zoomOut 600ms ease both;
+}
+/*分页*/
+ul.pagination{
+	display:-webkit-inline-box;
+}
+.pagination li{padding: 0 150px}
+@-webkit-keyframes zoomOut{
+	0%{
+		-webkit-transform:scale(.6);
+	}
+	100%{
+		-webkit-transform:scale(1);
+	}
+}
+@-moz-keyframes zoomOut{
+	0%{
+		-moz-transform:scale(.6);
+	}
+	100%{
+		-moz-transform:scale(1);
+	}
+}
+@-o-keyframes zoomOut{
+	0%{
+		-o-transform:scale(.6);
+	}
+	100%{
+		-o-transform:scale(1);
+	}
+}
+@keyframes zoomOut{
+	0%{
+		transform:scale(.6);
+	}
+	100%{
+		transform:scale(1);
+	}
+}
+
+@media only screen and (max-width:768px){
+	.select_main li{
+		display:block;
+		width:100%;
+	}
+	.select_main > li > a{
+		padding:13px 0 14px 20px;
+	}
+	.select_main > li.brand{
+		display:none !important;
+	}
+	.select_main a{
+		width:100%;
+		box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+	}
+	.select_main ul, .select_main ul li ul{
+		width:100%;
+		padding:0;
+		left:0;
+		border:none;
+		position:static;
+		box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		-webkit-box-sizing:border-box;
+	}
+	.select_main > li > ul > li:first-child a:before, .select_main > li > ul > li ul li:first-child a:before{
+		border:none;
+	}
+	.select_main ul li{
+		border-left:none;
+		border-right:none;
+	}
+	.select_main ul li a{
+		padding-top:10px;
+		padding-bottom:10px;
+	}
+	.select_main ul > li > a{
+		padding-left:40px !important;
+	}
+	.select_main > li > ul > li > a{
+		padding-left:40px !important;
+	}
+	.select_main > li > ul > li > ul > li > a{
+		padding-left:60px !important;
+	}
+	.select_main > li > ul > li > ul > li > ul > li > a{
+		padding-left:80px !important;
+	}
+}
